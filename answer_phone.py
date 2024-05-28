@@ -5,11 +5,7 @@ import random
 app = Flask(__name__)
 
 story_dict = {
-    1: "https://timberwolf-cheetah-1758.twil.io/assets/story1.mp3",
-    2: "https://timberwolf-cheetah-1758.twil.io/assets/story2.mp3",
-    3: "https://timberwolf-cheetah-1758.twil.io/assets/story3.mp3",
-    4: "https://timberwolf-cheetah-1758.twil.io/assets/story4.mp3",
-    5: "https://timberwolf-cheetah-1758.twil.io/assets/story5.mp3"
+    1: "https://timberwolf-cheetah-1758.twil.io/assets/story1.mp3"
 }
 
 @app.route("/answer", methods=['GET', 'POST'])
@@ -66,7 +62,7 @@ def story():
 
     # Read a story to the caller
     response.say("Hackers are really cool! Here's your story. ")
-    response.play(story_dict[random.randint(1,5)])
+    response.play(story_dict[random.randint(1,len(story_dict))])
 
     # End the call with <Hangup>
     response.hangup()
