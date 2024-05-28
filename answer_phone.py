@@ -24,20 +24,20 @@ def answer_call():
 
         # <Say> a different message depending on the caller's choice
         if choice == '1':
-            resp.say('Finding you the perfect story!', voice='Polly.Salli')
+            resp.say('Finding you the perfect story!')
             resp.redirect('/story')
             return str(resp)
         elif choice == '2':
-            resp.say('Help us by telling us why you became a hacker, and how you would share that story at Hack at the Museum as a project. Please leave your story after the beep.', voice='Polly.Salli')
+            resp.say('Help us by telling us why you became a hacker, and how you would share that story at Hack at the Museum as a project. Please leave your story after the beep.')
             resp.redirect('/record')
             return str(resp)
         else:
             # If the caller didn't choose 1 or 2, apologize and ask them again
-            resp.say("Sorry, I don't understand that choice.", voice='Polly.Salli')
+            resp.say("Sorry, I don't understand that choice.")
 
     # Read a message aloud to the caller
     gather = Gather(num_digits=1)
-    resp.say("Welcome to Hack at the Museum! To listen to Hack Clubber's stories, press 1. To send in your story, press two.", voice='Polly.Salli')
+    resp.say("Welcome to Hack at the Museum! To listen to Hack Clubber's stories, press 1. To send in your story, press two.")
     resp.append(gather)
 
     resp.redirect('/answer')
@@ -65,7 +65,7 @@ def story():
     response = VoiceResponse()
 
     # Read a story to the caller
-    response.say("Hackers are really cool! Here's your story. ", voice='Polly.Salli')
+    response.say("Hackers are really cool! Here's your story. ")
     response.play(story_dict[random.randint(1,5)])
 
     # End the call with <Hangup>
