@@ -33,7 +33,7 @@ def answer_call():
 
     # Read a message aloud to the caller
     gather = Gather(num_digits=1)
-    resp.say("Welcome to Hack at the Museum! To listen to Hack Clubber's stories, press 1. To send in your story, press two.")
+    resp.say("Welcome to the Hack at the Museum Hotline! To listen to Hack Clubber's stories, press 1. To send in your story, press two.")
     resp.append(gather)
 
     resp.redirect('/answer')
