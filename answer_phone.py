@@ -62,7 +62,7 @@ def story():
     response = VoiceResponse()
 
     # Read a story to the caller
-    response.say("Hackers are really cool! Here's your story. ")
+    response.say("Here's why this Hack Club member became a hacker, and what they want to build during Hack at the Museum.")
     response.play(story_dict[random.randint(1,len(story_dict))])
 
     # End the call with <Hangup>
