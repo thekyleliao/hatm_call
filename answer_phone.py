@@ -7,7 +7,8 @@ app = Flask(__name__)
 story_dict = {
     1: "https://timberwolf-cheetah-1758.twil.io/assets/story1.mp3",
     2: "https://timberwolf-cheetah-1758.twil.io/assets/story2.wav",
-    3: "https://timberwolf-cheetah-1758.twil.io/assets/story3.wav"
+    3: "https://timberwolf-cheetah-1758.twil.io/assets/story3.wav",
+    4: "https://timberwolf-cheetah-1758.twil.io/assets/story7.wav"
 }
 
 @app.route("/answer", methods=['GET', 'POST'])
