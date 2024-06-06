@@ -27,7 +27,7 @@ def answer_call():
             resp.redirect('/story')
             return str(resp)
         elif choice == '2':
-            resp.say('Help us by telling us why you became a hacker, and how you would share that story at Hack at the Museum as a project. Please leave your story after the beep.')
+            resp.say('Help us by telling us why you became a hacker, and how you would share that story at Hack at the Museum as a project. Please leave your story after the beep. Hang up when you are finished!')
             resp.redirect('/record')
             return str(resp)
         else:
